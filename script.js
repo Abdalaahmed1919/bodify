@@ -1,5 +1,5 @@
 /* ==========================================================================
-   VENTO — interactions
+   BODIFY — interactions
    Vanilla JS + GSAP + ScrollTrigger + Lenis
    --------------------------------------------------------------------------
    ملاحظات سريعة للتعديل:
@@ -19,7 +19,7 @@
     product: {
       price: null, // مثال: 890
       currency: "EGP",
-      name: "VENTO Signature Cap",
+      name: "BODIFY Signature Cap",
     },
     // اربط endpoint حقيقي هنا لو حبيت تحوّل الفورم لطلب فعلي.
     orderEndpoint: "",
@@ -805,7 +805,7 @@
 
     if (orderImage && src) {
       orderImage.src = src;
-      orderImage.alt = `كاب Vento Signature بلون ${name}`;
+      orderImage.alt = `كاب Bodify Signature بلون ${name}`;
     }
   }
 
@@ -832,7 +832,7 @@
 
     incoming.dataset.src = src;
     incoming.src = src;
-    incoming.alt = `كاب Vento Signature بلون ${name}`;
+    incoming.alt = `كاب Bodify Signature بلون ${name}`;
     incoming.removeAttribute("aria-hidden");
 
     const reveal = () => {
@@ -1089,7 +1089,7 @@
       } else {
         // Demo mode: no backend connected.
         await new Promise((resolve) => window.setTimeout(resolve, 650));
-        console.info("VENTO — order request (demo)", payload);
+        console.info("BODIFY — order request (demo)", payload);
       }
 
       if (orderFormWrap) orderFormWrap.hidden = true;
@@ -1185,7 +1185,7 @@
       setupReveals();
       await loaderExit(true);
     } catch (error) {
-      console.error("VENTO — failed to start the experience", error);
+      console.error("BODIFY — failed to start the experience", error);
       activateStaticExperience();
       await loaderExit(false);
       doc.classList.remove("is-loading");
